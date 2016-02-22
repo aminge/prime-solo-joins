@@ -22,7 +22,7 @@ WHERE products.description = 'diet pepsi';
 SELECT first_name, count(orders.id) FROM customers
 JOIN addresses ON customers.id = addresses.customer_id
 JOIN orders ON addresses.id = orders.address_id
-GROUP BY customers.first_name;
+GROUP BY customers.id;
 
 -- 6. How many customers do we have?
 SELECT COUNT(id) FROM customers;
